@@ -7,7 +7,7 @@
 	{!!$post->body!!}
 </div>
 <hr>
-<small>{{$post->created_at}}</small>
+<small>{{$post->created_at}} by {{$post->user->name}}</small>
 <hr>
 <a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a>
 {!! Form::open(['action' => ['PostsController@destroy', $post->id],'method'=>'POST','class'=>'float-right']) !!}
